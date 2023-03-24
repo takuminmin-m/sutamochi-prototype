@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  devise_for :users
   get 'sample/index'
   post 'sample/create'
   put 'sample/update'
