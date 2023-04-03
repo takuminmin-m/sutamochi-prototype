@@ -10,4 +10,7 @@ Rails.application.routes.draw do
     end
   end
 
+  get 'start', to: 'logger#start'
+  get 'finish', to: 'logger#finish'
+  get 'index', to: 'logger#index'
 end
