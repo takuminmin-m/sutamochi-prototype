@@ -34,3 +34,5 @@
 
 # Ignore environmental variables
 /.env
+
+/config/credentials/development.key
