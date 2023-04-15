@@ -11,7 +11,7 @@ class LoggerController < ApplicationController
     今日も勉強するように励ましてください。"
     @message = miibo_generate(prompt)
     p @message
-    StudyNotifyMailer.with(user: @user, message: @message).start_study_notify.deliver_later(wait: 10.seconds)
+    StudyNotifyMailer.with(user: @user, message: @message).start_study_notify.deliver_later(wait: 1.day)
 
     render json: @study_log
   end
