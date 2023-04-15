@@ -15,3 +15,4 @@ class SampleController < ApplicationController
     render json: { 'message': 'this is delete' }
   end
 end
+  
