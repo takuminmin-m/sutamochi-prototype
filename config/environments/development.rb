@@ -76,4 +76,7 @@ Rails.application.configure do
     open_timeout: 5,
     read_timeout: 5,
   }
+
+  # Use on raspberrypi
+  config.hosts << 'raspberrypi.local'
 end
