@@ -6,8 +6,8 @@ class ApplicationController < ActionController::API
       'Content-Type' => 'application/json'
     }
     request_params = {
-      api_key: Rails.application.credentials.miibo_suta[:api_key],
-      agent_id: Rails.application.credentials.miibo_suta[:agent_id],
+      api_key: Rails.application.credentials.miibo_miharu[:api_key],
+      agent_id: Rails.application.credentials.miibo_miharu[:agent_id],
       utterance: prompt,
     }
 

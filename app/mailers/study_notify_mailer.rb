@@ -5,6 +5,6 @@ class StudyNotifyMailer < ApplicationMailer
     @user = params[:user]
     @message = params[:message]
 
-    mail(to: @user.email, subject: 'Start study notify')
+    mail(to: @user.email, subject: '今から勉強しませんか？')
   end
 end

@@ -6,12 +6,12 @@ class LoggerController < ApplicationController
 
     @user = User.first
     now = Time.now
-    prompt = "#{@user.name}は昨日、#{now.hour}時#{now.min}分から勉強を始めました。
+    prompt = "あなたの彼氏である私（#{@user.name}）は昨日、#{now.hour}時#{now.min}分から勉強を始めました。
     今はちょうど、昨日勉強し始めたときと同じ時間です。
-    今日も勉強するように励ましてください。"
+    今日も一緒に勉強するように誘ってください。"
     @message = miibo_generate(prompt)
     p @message
-    StudyNotifyMailer.with(user: @user, message: @message).start_study_notify.deliver_later(wait: 1.day)
+    StudyNotifyMailer.with(user: @user, message: @message).start_study_notify.deliver_later(wait: 1.second)
 
     render json: @study_log
   end
