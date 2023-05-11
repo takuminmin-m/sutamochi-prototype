@@ -8,7 +8,7 @@ class LoggerController < ApplicationController
     now = Time.now
     tomorrow_now = now + 3600*24 - 1000
 
-    StudyStartNotifyJob.set(wait_until: tomorrow_now).perform_later(user: user)
+    StudyStartNotifyJob.set(wait_until: tomorrow_now).perform_later(user)
     # StudyStartNotifyJob.perform_later(user)
 
     render json: @study_log
